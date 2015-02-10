@@ -1,4 +1,4 @@
-### Build ###
+### Build
 
 For my continuous integration build/test tool, I chose to use [Jenkins](http://jenkins-ci.org/).  This takes care of the status
 (via GUI) portion automatically.  Jenkins plugins for Git/Github allowed me to configure triggered 
@@ -17,3 +17,24 @@ is run `make pull` to pull the necessary docker images, and `make test` to execu
 Jenkins supports running multiple builds via "executors."  This was easily configured, and in my case,
 I chose to have three executors.
 
+### Screenshots/Associated Functions
+
+- Triggered Builds
+![Build Trigger Via Git Hook](images/trigger.png "Build Trigger Via Git Hook")
+
+- Dependency Management and State
+
+![GroundsIO installs in Docker containers by default - state already handled](images/docker_state_log.png "Docker Containers Used in Install")
+![Rails Bundler used to handle dependencies, all automated and part of GroundsIO install process (inside containers)](images/state_build_bundle.png "Rails Bundler")
+
+- Build Script Execution
+![Build Scripts](images/build_scripts.png "Build Scripts")
+
+
+- Multiple Nodes (Executors - Parallel)
+![Multiple Executors Running in Parallel](images/multiple_slaves.png "Multiple Executors")
+
+
+- Status via HTTP
+
+![Sample Status Page (before commit hooks were added)](images/trigger.png "Status Page")
