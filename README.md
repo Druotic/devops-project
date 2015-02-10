@@ -58,3 +58,9 @@ A sample status page (before commit hooks were added).  Additional status inform
 ### Code (config)
 
   - The config.xml file which contains the configuration for the build has been included [here](https://github.com/Druotic/devops-project/blob/master/config.xml).
+
+### Other Notes
+
+You may have noticed all of the screenshots were of failing builds. This is because there were some additional configuration, networking, or other details (related to the docker remote API, most likely) which I was unable to get sorted out before the deadline.  I will attempt to get this sorted out soon.  
+
+However, this isn't  very relevant since a passing build was not part of the five requirements for milestone one (we were only required to build and report the status - there was no mention of whether the status had to be successful).
