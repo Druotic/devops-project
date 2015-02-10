@@ -50,7 +50,7 @@ Multiple executors running in parallel.  In this case, three different builds tr
 
 ##### Status via HTTP
 
-![Sample Status Page (before commit hooks were added)](images/trigger.png "Status Page")
+![Sample Status Page (before commit hooks were added)](images/status.png "Status Page")
 
 A sample status page (before commit hooks were added).  Additional status information can be gathered via the console views, etc.
 
