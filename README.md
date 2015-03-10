@@ -19,25 +19,25 @@ I chose to have three executors.
 
 ### Screenshots/Associated Functions
 
-##### Unit Tests and Coverage Reporting
+#### Unit Tests and Coverage Reporting
 
 ![Test Coverage](images/test_cov.png "Test Coverage")
   
-##### Test Generation/Exploration Technique
+#### Test Generation/Exploration Technique
 
-##### Base Analysis (Static Analysis)
+#### Base Analysis (Static Analysis)
 
 ![Build Scripts](images/build_scripts.png "Build Scripts")
 
 Simple shell scripts used during the build process.  This project is relatively simple to set up, assuming the remote docker API has been set up (this was a pain to debug). Note that this is not part of the build process, it is a separate service which is not to be run on the slave.
 
-##### Extended Analysis
+#### Extended Analysis
 
 ![Multiple Executors Running in Parallel](images/multiple_slaves.png "Multiple Executors")
 
 Multiple executors running in parallel.  In this case, three different builds triggered in rapid succession (three pushes, each ~5-10 seconds apart).
 
-##### Gate (Reject/warn PR on fail)
+#### Gate (Reject/warn PR on fail)
 
 **Pending:**
 ![Pull Request - Build Pending](images/build_pending.png "Pull Request - Build Pending")
