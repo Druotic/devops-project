@@ -37,7 +37,7 @@ Simple shell scripts used during the build process.  This project is relatively 
 
 Multiple executors running in parallel.  In this case, three different builds triggered in rapid succession (three pushes, each ~5-10 seconds apart).
 
-##### Gate (Reject PR on fail)
+##### Gate (Reject/warn PR on fail)
 
 ![Pull Request - Build Pending](images/build_pending.png "Pull Request - Build Pending")
 
