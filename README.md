@@ -18,13 +18,13 @@ I chose to have three executors.
 
 #### Tests and Coverage Reporting
 
-Here, I am using the ![SimpleCov gem](https://github.com/colszowka/simplecov) to produce coverage reports.  The project already uses rspec for testing. I added the simplecov gem to the Gemfile and now I am able to automateically generate reports in an html format that is easily viewable via Jenkins (coverage is based on the rspec tests run).
+Here, I am using the [SimpleCov gem](https://github.com/colszowka/simplecov) to produce coverage reports.  The project already uses rspec for testing. I added the simplecov gem to the Gemfile and now I am able to automateically generate reports in an html format that is easily viewable via Jenkins (coverage is based on the rspec tests run).
 
 ![Test Coverage](images/test_cov.png "Test Coverage")
   
 #### Analysis
 
-For static analysis, I am using ![Brakeman](https://github.com/presidentbeef/brakeman), a well-known vulnerability analysis tool.
+For static analysis, I am using [Brakeman](https://github.com/presidentbeef/brakeman), a well-known vulnerability analysis tool.
 
 ![Security Static Analysis - Brakeman](images/brakeman_results.png "Brakeman")
 
