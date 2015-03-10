@@ -20,21 +20,21 @@ I chose to have three executors.
 
 ![Test Coverage](images/test_cov.png "Test Coverage")
   
-#### Test Generation/Exploration Technique
+#### Analysis
 
-#### Base Analysis (Static Analysis)
+![Security Static Analysis - Brakeman](images/brakeman_results.png "Brakeman")
 
-![Build Scripts](images/build_scripts.png "Build Scripts")
+Sample build - Brakeman reporting 0 warnings.  Despite it being successful (no vulnerabilities found),
+the exclamation point icon makes it look like a warning.  This seems like an odd choice for "success",
+but I left it 'as is' for now - it may be configurable.
 
-Simple shell scripts used during the build process.  This project is relatively simple to set up, assuming the remote docker API has been set up (this was a pain to debug). Note that this is not part of the build process, it is a separate service which is not to be run on the slave.
-
-#### Extended Analysis
-
-![Multiple Executors Running in Parallel](images/multiple_slaves.png "Multiple Executors")
-
-Multiple executors running in parallel.  In this case, three different builds triggered in rapid succession (three pushes, each ~5-10 seconds apart).
+**Sample Brakeman log output:**
+![Brakeman output](images/brakeman_running.png "Brakeman output")
 
 #### Gate (Reject/warn PR on fail)
+
+**Success:**
+![Pull Request - Build Success](images/build_passed.png "Pull Request - Build Success")
 
 **Pending:**
 ![Pull Request - Build Pending](images/build_pending.png "Pull Request - Build Pending")
