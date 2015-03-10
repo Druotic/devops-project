@@ -11,9 +11,6 @@ uses docker containers to run the application.  I chose this project primarily f
 state is restored back to an initial starting point with each run (satisfying the clean state
 requirement).
 
-GroundsIO uses Make and Rake to facilitate building the project.  From my perspective, all I need to do
-is run `make pull` to pull the necessary docker images, and `make test` to execute the tests.
-
 Jenkins supports running multiple builds via "executors."  This was easily configured, and in my case,
 I chose to have three executors.
 
