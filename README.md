@@ -5,7 +5,7 @@ For my continuous integration build/test tool, I chose to use [Jenkins](http://j
 builds when new commits are made to the master branch of the target application.
 
 Application used: [GoundsIO](https://github.com/grounds/grounds.io) was selected as the application to
-be built and tested.  It is a project which allows one to run code directly in the browser, and supports
+be built and tested.  It is a project which allows one to run code directly from the browser, and supports
 multiple different languages (see [website](http://beta.42grounds.io/)).  More interestingly, the project
 uses docker containers to run the application.  I chose this project primarily for this reason because
 state is restored back to an initial starting point with each run (satisfying the clean state
@@ -21,11 +21,8 @@ I chose to have three executors.
 
 ##### Unit Tests and Coverage Reporting
 
-![Build Trigger Via Git Hook](images/trigger.png "Build Trigger Via Git Hook")
+![Test Coverage](images/test_cov.png "Test Coverage")
   
-Notice the "Started by GitHub push" line. (Build was triggered by a push to 
-[master](https://github.com/druotic/grounds.io)) 
-
 ##### Test Generation/Exploration Technique
 
 ![GroundsIO installs in Docker containers by default - state already handled](images/docker_state_log.png "Docker Containers Used in Install")
