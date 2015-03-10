@@ -39,8 +39,10 @@ Multiple executors running in parallel.  In this case, three different builds tr
 
 ##### Gate (Reject/warn PR on fail)
 
+**Pending:**
 ![Pull Request - Build Pending](images/build_pending.png "Pull Request - Build Pending")
 
+**Failed:**
 ![Pull Request - Build Failed](images/build_fail.png "Pull Request - Build Failed")
 
 
