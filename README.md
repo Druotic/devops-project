@@ -25,14 +25,6 @@ I chose to have three executors.
   
 ##### Test Generation/Exploration Technique
 
-![GroundsIO installs in Docker containers by default - state already handled](images/docker_state_log.png "Docker Containers Used in Install")
-
-GroundsIO installs in Docker containers by default.  As a result, state is always reset back to the that of the initial image. As mentioned before, this was a motivating factor for picking this project. Make (shown) and Rake (not shown) are also used in GroundsIO for task handling and ensuring that tasks are repeatable. 
-
-![Rails Bundler used to handle dependencies, all automated and part of GroundsIO install process (inside containers)](images/state_build_bundle.png "Rails Bundler")
-
-Rails Bundler is used by GroundsIO to handle dependencies (inside of the containers).
-
 ##### Base Analysis (Static Analysis)
 
 ![Build Scripts](images/build_scripts.png "Build Scripts")
@@ -47,10 +39,16 @@ Multiple executors running in parallel.  In this case, three different builds tr
 
 ##### Gate (Reject PR on fail)
 
-![Sample Status Page (before commit hooks were added)](images/status.png "Status Page")
+![Pull Request - Build Pending](images/build_pending.png "Pull Request - Build Pending")
 
-A sample status page (before commit hooks were added).  Additional status information can be gathered via the console views, etc.
+![Pull Request - Build Failed](images/build_fail.png "Pull Request - Build Failed")
 
+
+Note: I chose to leave it marked as caution/building, as opposed to completely rejecting and 
+closing the pull request.  This leaves more control available to the developer. They can
+choose whether to reject or merge in the event of experimental changes or other scenarios
+where it is okay for master to be broken (this shouldn't normally be the case, but having the option
+is still nice).
 
 ### Code (config)
 
