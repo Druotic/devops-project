@@ -21,7 +21,7 @@ For deployment, I am using [AWS CodeDeploy](http://aws.amazon.com/codedeploy/) (
 
 - Automatic deployment environment configuration:
 
-This is handled by AWS CodeDeploy's (appspec.yml)[appspec.yml] file.  In this file, configuration management details are specified (pre-install dependencies, etc).
+This is handled by AWS CodeDeploy's [appspec.yml](appspec.yml) file.  In this file, configuration management details are specified (pre-install dependencies, etc).
 
 - Deployment of binaries created by build step:
 
@@ -42,7 +42,7 @@ which are all deployed to in parallel (there are other deployment configurations
 
 ### Code (config)
 
-  - The config.xml file which contains the configuration for the build (on jenkins) has been included [here](https://github.com/Druotic/devops-project/blob/milestone3/config.xml).
+  - [config.xml](config.xml) has been included. This is the Jenkins configuration file.
 
-  - The appspec.yml file has also been included, which is used by CodeDeploy for configuration management.
+  - [appspec.yml](appspec.yml) has also been included, which is used by AWS CodeDeploy for configuration management.
 
