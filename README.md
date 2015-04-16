@@ -1,4 +1,4 @@
-### Test & Analysis
+### Deployment
 
 For my continuous integration build/test tool, I chose to use [Jenkins](http://jenkins-ci.org/).  This takes care of the status
 (via GUI) portion automatically.  Jenkins plugins for Git/Github allowed me to configure triggered 
@@ -14,46 +14,24 @@ requirement).
 Jenkins supports running multiple builds via "executors."  This was easily configured, and in my case,
 I chose to have three executors.
 
+For deployment, I am using AWS CodeDeploy (with EC2), AWS S3, and the Jenkin AWS CodeDeploy plugin.
+
 ### Screenshots/Associated Functions
 
-#### Tests and Coverage Reporting
+- Automatic deployment environment configuration:
 
-Here, I am using the [SimpleCov gem](https://github.com/colszowka/simplecov) to produce coverage reports.  The project already uses rspec for testing. I added the simplecov gem to the Gemfile and now I am able to automateically generate reports in an html format that is easily viewable via Jenkins (coverage is based on the rspec tests run).
+This is handled by AWS CodeDeploy's appspec.yml file.  In this file, configuration management details are specified (pre-install dependencies, etc).
 
-![Test Coverage](images/test_cov.png "Test Coverage")
-  
-#### Analysis
+- Deployment of binaries created by build step:
 
-For static analysis, I am using [Brakeman](https://github.com/presidentbeef/brakeman), a well-known vulnerability analysis tool.
+The Jenkins AWS CodeDeploy plugin zips the build artifacts (the entire workspace) and pushes it to AWS S3.
 
-![Security Static Analysis - Brakeman](images/brakeman_results.png "Brakeman")
+- Remote deployment:
 
-Sample build - Brakeman reporting 0 warnings.  Despite it being successful (no vulnerabilities found),
-the exclamation point icon makes it look like a warning.  This seems like an odd choice for "success",
-but I left it 'as is' for now - it may be configurable.
-
-**Sample Brakeman log output:**
-![Brakeman output](images/brakeman_running.png "Brakeman output")
-
-#### Gate (Reject/warn PR on fail)
-
-**Success:**
-![Pull Request - Build Success](images/build_passed.png "Pull Request - Build Success")
-
-**Pending:**
-![Pull Request - Build Pending](images/build_pending.png "Pull Request - Build Pending")
-
-**Failed:**
-![Pull Request - Build Failed](images/build_fail.png "Pull Request - Build Failed")
-
-
-Note: I chose to leave it marked as caution/building, as opposed to completely rejecting and 
-closing the pull request.  This leaves more control available to the developer. They can
-choose whether to reject or merge in the event of experimental changes or other scenarios
-where it is okay for master to be broken (this shouldn't normally be the case, but having the option
-is still nice).
+The Jenkins AWS CodeDeploy plugin then triggers a deployment to EC2 instances. The deployment setup is configured on the AWS CodeDeploy side.  In my case, I have 3 EC2 instances
+which are all deployed to in parallel (there are other deployment configurations available as well).  Deployment steps are defined in an Appspec file.
 
 ### Code (config)
 
-  - The config.xml file which contains the configuration for the build has been included [here](https://github.com/Druotic/devops-project/blob/milestone2/config.xml).
+  - The config.xml file which contains the configuration for the build (on jenkins) has been included [here](https://github.com/Druotic/devops-project/blob/milestone3/config.xml).
 
