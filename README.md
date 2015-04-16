@@ -4,7 +4,7 @@ For my continuous integration build/test tool, I chose to use [Jenkins](http://j
 (via GUI) portion automatically.  Jenkins plugins for Git/Github allowed me to configure triggered 
 builds when new commits are made to the master branch of the target application.
 
-Application used: [GoundsIO](https://github.com/grounds/grounds.io) was selected as the application to
+Application used: [GroundsIO](https://github.com/grounds/grounds.io) was selected as the application to
 be built and tested.  It is a project which allows one to run code directly from the browser, and supports
 multiple different languages (see [website](http://beta.42grounds.io/)).  More interestingly, the project
 uses docker containers to run the application.  I chose this project primarily for this reason because
@@ -15,7 +15,7 @@ Jenkins supports running multiple builds via "executors."  This was easily confi
 I chose to have three executors.
 
 For deployment, I am using [AWS CodeDeploy](http://aws.amazon.com/codedeploy/) (with [EC2](http://aws.amazon.com/ec2/)), 
-[AWS S3](http://aws.amazon.com/s3/), and the Jenkin [AWS CodeDeploy plugin](https://wiki.jenkins-ci.org/display/JENKINS/AWS+Codedeploy+plugin).
+[AWS S3](http://aws.amazon.com/s3/), and the Jenkins [AWS CodeDeploy plugin](https://wiki.jenkins-ci.org/display/JENKINS/AWS+Codedeploy+plugin).
 
 ### Screenshots/Associated Functions
 
