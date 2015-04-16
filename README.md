@@ -35,10 +35,24 @@ The Jenkins AWS CodeDeploy plugin then triggers a deployment to EC2 instances. T
 which are all deployed to in parallel (there are other deployment configurations available as well).  Deployment steps are defined in an Appspec file.
 
 ![](images/s3.png "S3 Bucket")
+
+S3 Bucket Containing Zipped App Revisions
+
 ![](images/jenkins_copy_to_s3.png "Copying zip over to S3 bucket")
+
+Copying Zip Over to S3 Bucket
+
 ![](images/ec2_instances.png "Deploy nodes")
+
+EC2 Instances Used For Deployment
+
 ![](images/code_deploy_app.png "CodeDeploy Application")
+
+GroundsIO Application Defined For Deployment
+
 ![](images/deployment_codedeploy.png "CodeDeploy Deployment In Progress")
+
+CodeDeploy Deployment to Group (of 3 EC2 Instances) in Progress
 
 ### Code (config)
 
