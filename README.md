@@ -13,7 +13,7 @@ branches.
 For my special milestone, I have implemented a solution which analyzes the code that is entered inside 
 of the web console (and submitted).  It identifies keywords, counts the total number of occurrences,
 and stores this information in a Redis cache.  Then, another script \<insert name\> can be run which will
-pull the counts from Redis and plot a bar graph of the results using (Plotly)[https://plot.ly/].
+pull the counts from Redis and plot a bar graph of the results using [Plotly](https://plot.ly/).
 
 The bar graph is not visible in the deployment pipeline, instead a URL is returned wherever the script
 was executed from.  The URL leads to a graph (on Plotly's website) which can be shared publicly or kept 
