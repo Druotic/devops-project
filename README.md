@@ -10,7 +10,6 @@ requirement).
 If you would like to see details about CI tool, deployment strategy, testing, etc, see milestone[1-3]
 branches.
 
-
 For my special milestone, I have implemented a solution which analyzes the code that is entered inside 
 of the web console (and submitted).  It identifies keywords, counts the total number of occurrences,
 and stores this information in a Redis cache.  Then, another script <insert name> can be run which will
@@ -20,7 +19,6 @@ The bar graph is not visible in the deployment pipeline, instead a URL is return
 was executed from.  The URL leads to a graph (on Plotly's website) which can be shared publicly or kept 
 private.  This URL is also stored in Redis and a route was created at <IP>:<port>/graph which will redirect 
 to the URLfor convenience.  Each time the <script> is run, the previous graph is replaced.
-
 
 ### Motivation
 
@@ -37,7 +35,6 @@ really meant to be used for human languages, not coding languages. As a result, 
 extracted aren't exactly what we want.  However, it was a starting point that was meant to demonstrate
 the idea and could later be built upon by both replacing AlchemyAPI with a more appropriate NLP tool and 
 automate the graphing process (don't require running a script manually).
-
 
 ### Everything below is from previous milestone.
 
