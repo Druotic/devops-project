@@ -31,7 +31,7 @@ conceptually, etc.  With this knowledge, introductory language instructors could
 curriculumn to focus on the parts of a language that are most important and/or difficult. In theory,
 this would result is more effective instructors and better prepare student for their future.
 
-However, you may notice the limitations of the keyword extraction.  Currently, (AlchemyAPI)[http://www.alchemyapi.com/]
+However, you may notice the limitations of the keyword extraction.  Currently, [AlchemyAPI](http://www.alchemyapi.com/)
 is being used for keyword extraction.  AlchemyAPI (at least, the keyword/entity extraction portion) is 
 really meant to be used for human languages, not coding languages. As a result, the keywords being
 extracted aren't exactly what we want.  However, it was a starting point that was meant to demonstrate
@@ -39,7 +39,9 @@ the idea and could later be built upon by both replacing AlchemyAPI with a more 
 automate the graphing process (don't require running a script manually).
 
 
-### Everything below is from previous milestone.  To be removed soon.
+### Everything below is from previous milestone.
+
+To be removed soon.
 
 
 ### Deployment
