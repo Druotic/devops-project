@@ -2,7 +2,7 @@
 
 - Redis up and running. 
 - Plotly api key/authentication is setup properly see https://plot.ly/python/getting-started
-    and https://plot.ly/settings/api
+  i.e. be sure ~/.plotly/.credentials is present with your credentials
 
 
 ### Install dependencies:
