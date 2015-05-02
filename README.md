@@ -1,6 +1,6 @@
 # Special Milestone
 
-###Introduction
+##Introduction
 
 [GroundsIO](https://github.com/grounds/grounds.io) was selected as the application to
 be built, tested, and deployed.  It is a project which allows one to run code directly from the browser, and supports
@@ -10,7 +10,9 @@ state is restored back to an initial starting point with each run (satisfying th
 requirement). If you would like to see details about CI tool, deployment strategy, testing, etc, see milestone[1-3]
 branches.
 
-**Video Link:** This is the [video](...) shown in class which describes the deployment pipeline (majority) for milestones 1-3. An introduction/motivation for this special milestone is also disccused.  However, as you'll see below, I elected to replace graphite/graphana with [Redis](http://redis.io/) and [Plotly](https://plot.ly/).
+**Video Link:** This is the [video](https://www.youtube.com/watch?v=FfVx3cylse0) shown in class which describes the majority of my build/test/deployment pipeline (milestones 1-3). An introduction/motivation for this special milestone is also disccused in the video.  However, as you'll see below, I elected to replace graphite/graphana with [Redis](http://redis.io/) and [Plotly](https://plot.ly/). 
+
+*Correction to video:* In the video I state that GroundsIO does not have 100% test coverage.  Actually, it does.  I disabled some of the tests for demo purposes (to show uncovered/red lines in the coverage report) and forgot when I was recording the video.
 
 ### Description/Implementation
 
