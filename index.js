@@ -17,12 +17,6 @@ app.post('/snippet', function(req, res){
   res.send("Snippet Received!");
 });
 
-app.get('/', function(req, res){
-  var code = "Hello Carl.  How was your day today? Carl, Hi there. Hi Carl.";
-  storeKeywords(code);
-  res.send("Snippet Received!");
-});
-
 app.get('/graph', function(req, res){
   exec('python helpers/graph.py ' + prefix, function(err, stdout, stderr) {
     if(err)
