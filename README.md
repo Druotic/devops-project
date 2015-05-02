@@ -12,8 +12,10 @@ branches.
 
 ### Description/Implementation
 
+For my special milestone, I focused on a more specific problem that has less to do with deployment infrastructure, and more about building a proof of concept for an interesting problem/idea.  More details follow, but the architecture consists of GroundsIO running on one machine, and my web server running on another.  My web server makes use of both AlchemyAPI and Plotly's APIs.  My web server listens for requests from the GroundsIO server, and it also provides a means of viewing the resulting graphs.  More details of the graphs, servers, code, etc follow. 
+
 For my special milestone, I have implemented a solution which analyzes the code that is entered inside
-of the GroundsIO web console (and submitted).  It identifies keywords, counts the total number of occurrences,
+of the GroundsIO web console (and submitted) - see first screenshot below. It identifies keywords, counts the total number of occurrences,
 and stores this information in a Redis cache.  I added an AJAX request that will trigger when clicking the run button. This change is in [gui.js](gui.js), which is from the original GroundsIO project. The function (with ajax addition) is as follows:
 
     this.button.run.on('click', function(event) {
@@ -69,7 +71,7 @@ this would result is more effective instructors and better prepare student for t
 However, you may have noticed the limitations of the keyword extraction.  Currently, [AlchemyAPI](http://www.alchemyapi.com/)
 is being used for keyword extraction.  AlchemyAPI's keyword/entity extraction is
 really meant to be used for human languages, not coding languages. As a result, the keywords being
-extracted aren't exactly what we want.  However, it is a starting point that is meant to demonstrate
+extracted aren't exactly what we want (numbers, names of people, etc).  However, it is a starting point that is meant to demonstrate
 the idea and could later be built upon by replacing AlchemyAPI with a more appropriate NLP tool.
 
 
