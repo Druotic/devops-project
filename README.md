@@ -10,6 +10,8 @@ state is restored back to an initial starting point with each run (satisfying th
 requirement). If you would like to see details about CI tool, deployment strategy, testing, etc, see milestone[1-3]
 branches.
 
+**Video Link:** This is the [video](...) shown in class which describes the deployment pipeline (majority) for milestones 1-3. An introduction/motivation for this special milestone is also disccused.  However, as you'll see below, I elected to replace graphite/graphana with [Redis](http://redis.io/) and [Plotly](https://plot.ly/).
+
 ### Description/Implementation
 
 For my special milestone, I focused on a more specific problem that has less to do with deployment infrastructure, and more about building a proof of concept for an interesting problem/idea.  More details follow, but the architecture consists of GroundsIO running on one machine, and my web server running on another.  My web server makes use of both AlchemyAPI and Plotly's APIs.  My web server listens for requests from the GroundsIO server, and it also provides a means of viewing the resulting graphs.  More details of the graphs, servers, code, etc follow. 
