@@ -34,7 +34,7 @@ and stores this information in a Redis cache.  I added an AJAX request that will
           self.client.send('run', self.ground.getAttributes());
     });
 
-For simplicity/demonstrative purposes, I hardcoded the IP/port number here.  Once, code is submitted and the run button is clicked, a `POST /snippet` request is sent to the server I created which will be listening on the above IP/port.  This server then uses AlchemyAPI's [API](http://www.alchemyapi.com/) to extract keywords from the source code.  The extracted keywords and counts are stored in Redis.  If `GET /graph` is accessed (i.e. `52.24.0.69:3007/graph` in this case), then the keywords and counts are graphed in a bar chart using Plotly's [API](https://plot.ly/python/bar-charts/).  Upon completion, a redirect to the Plotly graph occurs, displaying the resulting bar graph.
+For simplicity/demonstrative purposes, I hardcoded the IP/port number here.  Once code is submitted and the run button is clicked, a `POST /snippet` request is sent to the server I created which will be listening on the above IP/port.  This server then uses AlchemyAPI's [API](http://www.alchemyapi.com/) to extract keywords from the source code.  The extracted keywords and counts are stored in Redis.  If `GET /graph` is accessed (i.e. `52.24.0.69:3007/graph` in this case), then the keywords and counts are graphed in a bar chart using Plotly's [API](https://plot.ly/python/bar-charts/).  Upon completion, a redirect to the Plotly graph occurs, displaying the resulting bar graph.
 
 
 **Application Pre-reqs (listening server + graphing):** see [RUN.md](RUN.md)
