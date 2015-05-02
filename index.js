@@ -23,7 +23,7 @@ app.get('/', function(req, res){
   res.send("Snippet Received!");
 });
 
-app.post('/graph', function(req, res){
+app.get('/graph', function(req, res){
   exec('python helpers/graph.py ' + prefix, function(err, stdout, stderr) {
     if(err)
       throw err;

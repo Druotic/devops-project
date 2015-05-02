@@ -3,9 +3,6 @@ import plotly.plotly as py
 from plotly.graph_objs import *
 
 def graph(key_val_tuples):
-    # Learn about API authentication here: https://plot.ly/python/getting-started
-    # Find your api_key here: https://plot.ly/settings/api
-
     # Unpack tuples array into two arrays - keys and counts
     keys, counts = tuple(list(tup) for tup in zip(*key_val_tuples))
 
@@ -25,7 +22,7 @@ def main(argv):
         print 'graph.py <prefix>'
         sys.exit()
     key_val_tuples = get_tuples(args[0])
-    graph(key_val_tuples))
+    graph(key_val_tuples)
 
 
 def get_tuples(prefix):
@@ -35,7 +32,7 @@ def get_tuples(prefix):
     for key in keys:
         orig_key = key
         key = key.replace(prefix, "", 1)
-        key_val_tuples.extend( (key, int(redis_client.get(orig_key)) )
+        key_val_tuples.append( ( key, int(redis_client.get(orig_key)) ) )
 
     return sorted(key_val_tuples, key=lambda kvtuple: kvtuple[1], reverse=True)
 
