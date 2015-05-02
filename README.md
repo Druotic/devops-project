@@ -1,6 +1,6 @@
 ### Special Milestone
 
-Application used: [GoundsIO](https://github.com/grounds/grounds.io) was selected as the application to
+Application used: [GroundsIO](https://github.com/grounds/grounds.io) was selected as the application to
 be built and tested.  It is a project which allows one to run code directly from the browser, and supports
 multiple different languages (see [website](http://beta.42grounds.io/)).  More interestingly, the project
 uses docker containers to run the application.  I chose this project primarily for this reason because
