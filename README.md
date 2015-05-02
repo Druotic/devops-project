@@ -10,8 +10,8 @@ requirement).
 If you would like to see details about CI tool, deployment strategy, testing, etc, see milestone[1-3]
 branches.
 
-Prereqs: Redis, Plotly token/auth config, and AlchemyAPI auth/config
-<MENTION ENV VARS HERE>
+Application Pre-reqs (listening server + graphing): see [RUN.md](RUN.md)
+
 
 For my special milestone, I have implemented a solution which analyzes the code that is entered inside
 of the web console (and submitted).  It identifies keywords, counts the total number of occurrences,
