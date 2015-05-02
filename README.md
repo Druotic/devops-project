@@ -1,17 +1,16 @@
-### Special Milestone
+# Special Milestone
 
-Application used: [GroundsIO](https://github.com/grounds/grounds.io) was selected as the application to
-be built and tested.  It is a project which allows one to run code directly from the browser, and supports
+###Introduction
+
+[GroundsIO](https://github.com/grounds/grounds.io) was selected as the application to
+be built, tested, and deployed.  It is a project which allows one to run code directly from the browser, and supports
 multiple different languages (see [website](http://beta.42grounds.io/)).  More interestingly, the project
 uses docker containers to run the application.  I chose this project primarily for this reason because
 state is restored back to an initial starting point with each run (satisfying the clean state
-requirement).
-
-If you would like to see details about CI tool, deployment strategy, testing, etc, see milestone[1-3]
+requirement). If you would like to see details about CI tool, deployment strategy, testing, etc, see milestone[1-3]
 branches.
 
-Application Pre-reqs (listening server + graphing): see [RUN.md](RUN.md)
-
+### Description/Implementation
 
 For my special milestone, I have implemented a solution which analyzes the code that is entered inside
 of the GroundsIO web console (and submitted).  It identifies keywords, counts the total number of occurrences,
@@ -31,10 +30,32 @@ and stores this information in a Redis cache.  I added an AJAX request that will
 
 For simplicity/demonstrative purposes, I hardcoded the IP/port number here.  Once, code is submitted and the run button is clicked, a `POST /snippet` request is sent to the server I created which will be listening on the above IP/port.  This server then uses AlchemyAPI's [API](http://www.alchemyapi.com/) to extract keywords from the source code.  The extracted keywords and counts are stored in Redis.  If `GET /graph` is accessed (i.e. `52.24.0.69:3007/graph` in this case), then the keywords and counts are graphed in a bar chart using Plotly's [API](https://plot.ly/python/bar-charts/).  Upon completion, a redirect to the Plotly graph occurs, displaying the resulting bar graph.
 
+
+**Application Pre-reqs (listening server + graphing):** see [RUN.md](RUN.md)
+
+
 ### In Action
 
-Screenshots/small descriptions here.
+**Enter sample code 1:**
 
+![](images/sample_code_0.png)
+
+**Enter sample code 2:**
+
+![](images/sample_code_1.png)
+
+
+**Captured/received code and extracted keywords/counts being displayed in the console:**   
+(this is the console view from the listening server I created):
+
+![](images/console_out.png)
+
+
+**After a few more runs...** access `/graph`:
+
+![](images/graph.png)
+
+**Note:** We are redirected from `/graph` to the Plotly website that now is hosting our graph.  These graphs can be edited, exported, shared, etc online.  Displayed keywords/labels are in the form of '\<language\>-\<keyword\>'. Keywords are on the x-axis, number of occurrences on the y-axis. *See Motivation & Limitations regarding unusual/bad keyword extraction.*
 
 ### Motivation & Limitations
 
