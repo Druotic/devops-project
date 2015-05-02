@@ -15,7 +15,7 @@ Application Pre-reqs (listening server + graphing): see [RUN.md](RUN.md)
 
 For my special milestone, I have implemented a solution which analyzes the code that is entered inside
 of the GroundsIO web console (and submitted).  It identifies keywords, counts the total number of occurrences,
-and stores this information in a Redis cache.  I added an AJAX request that will trigger when clicking the run button. This change is in the file [gui.js](gui.js), which is from the original GroundsIO project. The function (with ajax addition) is as follows:
+and stores this information in a Redis cache.  I added an AJAX request that will trigger when clicking the run button. This change is in [gui.js](gui.js), which is from the original GroundsIO project. The function (with ajax addition) is as follows:
 
     this.button.run.on('click', function(event) {
         self.disableRunButtonFor(500);
